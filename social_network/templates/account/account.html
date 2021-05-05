@@ -33,18 +33,18 @@
             <li><a href="#" id="modalwin">Create a new event</a></li>
           </ul>
         </div>
-        <div class="category-wrap">
-          <h6>Followers</h6>
-          <div>
-            {% for follower in followers %}
-              <div class="friend_block">
-                <a href="{% url 'account:account' follower.user.id %}"><img src="{{ follower.user.profile.avatar.url }}" alt="{{ follower.user.username }}" class="rounded-circle w-100"></a>
-                  <h4 class="card-title wordwrap textowerflow"><a href="{% url 'account:account' follower.user.id %}">
-                  {{ follower.user.first_name }} {{ follower.user.last_name }}</a></h4>
-              </div>
-            {% endfor %}
-          </div>
-        </div>
+<!--        <div class="category-wrap">-->
+<!--          <h6>Followers</h6>-->
+<!--          <div>-->
+<!--            {% for follower in followers %}-->
+<!--              <div class="friend_block">-->
+<!--                <a href="{% url 'account:account' follower.user.id %}"><img src="{{ follower.user.profile.avatar.url }}" alt="{{ follower.user.username }}" class="rounded-circle w-100"></a>-->
+<!--                  <h4 class="card-title wordwrap textowerflow"><a href="{% url 'account:account' follower.user.id %}">-->
+<!--                  {{ follower.user.first_name }} {{ follower.user.last_name }}</a></h4>-->
+<!--              </div>-->
+<!--            {% endfor %}-->
+<!--          </div>-->
+<!--        </div>-->
       </div>
 
       <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
