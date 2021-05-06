@@ -92,7 +92,7 @@
               <form id="leave_comment" enctype="multipart/form-data" class="form-inline mb-3">
                 {% csrf_token %}
                 <textarea name="text" id="comment_text"></textarea>
-                <input type="submit" name="leave_comment" id="leave_comment_submit" value="Отправить" class="btn btn-primary">
+                <input type="submit" name="leave_comment" id="leave_comment_submit" value="Send" class="btn btn-primary">
               </form>
               <div id="comment_block">
                 {% for comment in post.post_comments.all %}
@@ -106,7 +106,7 @@
                         <div class="wordwrap textowerflow">
                           {{comment.comment_text|linebreaks|urlizetrunc:30}}
                         </div>
-                        <a href="#" class="delete_comment btn btn-sm btn-primary float-right mb-1 mr-1" data-id="comment{{comment.id}}" data-action="{{comment.id}}" >Удалить</a>
+                        <a href="#" class="delete_comment btn btn-sm btn-primary float-right mb-1 mr-1" data-id="comment{{comment.id}}" data-action="{{comment.id}}" >Remove</a>
                       </div>
                     </div>
                   {% else %}

@@ -20,7 +20,7 @@ def register(request):
         form = UserRegisterForm(request.POST)
         email = request.POST.get('email')
         if User.objects.filter(email=email).exists():
-            form.add_error('email', "User with such email already excists!")
+            form.add_error('email', "User with such email already exists.")
         first_name = request.POST.get('first_name')
         last_name = request.POST.get('last_name')
         if form.is_valid():
